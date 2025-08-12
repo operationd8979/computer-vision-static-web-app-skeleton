@@ -1,6 +1,10 @@
 import React from 'react';
 import { analyzeDirect } from './vision_module/vision';
 
+/**
+ * This component allows users to upload an image and receive analysis results.
+ * @returns JSX.Element
+ */
 function App() {
     const [imageUrl, setImageUrl] = React.useState("");
     const [result, setResult] = React.useState(null);

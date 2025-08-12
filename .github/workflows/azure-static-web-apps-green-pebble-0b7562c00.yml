@@ -22,6 +22,9 @@ jobs:
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
+        env:
+          REACT_APP_VISION_ENDPOINT: ${{ secrets.REACT_APP_VISION_ENDPOINT }}
+          REACT_APP_VISION_KEY: ${{ secrets.REACT_APP_VISION_KEY }}
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_GREEN_PEBBLE_0B7562C00 }}
           repo_token: ${{ secrets.GITHUB_TOKEN }} # Used for Github integrations (i.e. PR comments)
