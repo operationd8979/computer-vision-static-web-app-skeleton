@@ -8,7 +8,6 @@ function App() {
     const handleAnalyze = async () => {
         try {
             const result = await analyzeDirect(imageUrl);
-            console.log("Analysis result:", result);
             setResult(result);
         } catch (error) {
             console.error("Error analyzing image:", error);
